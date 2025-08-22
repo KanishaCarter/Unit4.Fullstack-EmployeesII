@@ -21,9 +21,6 @@ async function seedEmployees() {
     `
     const result = await client.query(SQL);
     console.log("🌱 Database seeded.");
-    app.listen(3000, ()=> {
-      console.log('The server is running!')
-    })
   } catch(err) {
     console.log(err);
   } finally {

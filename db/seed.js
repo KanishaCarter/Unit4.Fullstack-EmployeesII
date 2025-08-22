@@ -6,6 +6,8 @@ async function seedEmployees() {
   try {
     await client.connect()
     const SQL = `
+    DROP TABLE IF EXISTS employees;
+    CREATE TABLE employees;
     INSERT INTO employees(name, birthday, salary)
     VALUES('Kanisha Carter', '1990-10-05', 250000),
     ('Timmy Turner', '1994-09-15', 69000),
@@ -25,7 +27,10 @@ async function seedEmployees() {
       console.log('The server is running!')
     })
   } catch(err) {
-    console.log(err)
+    console.log(err);
+  } finally {
+    // Close link to database
+    await client.end();
   }
 }
 

@@ -19,9 +19,9 @@ async function seedEmployees() {
     ('Devante Berry', '1992-09-26', 300000),
     ('Danielle Williams', '1995-07-20', 500000),
     ('Jackie Smith', '1960-02-14', 88000),
-    ('Donald Hanks', '1945-06-13', 111000)
-    ;`
-    await client.Query(SQL)
+    ('Donald Hanks', '1945-06-13', 111000);
+    `
+    const result = await client.query(SQL)
     console.log("🌱 Database seeded.");
     app.listen(3000, ()=> {
       console.log('The server is running!')

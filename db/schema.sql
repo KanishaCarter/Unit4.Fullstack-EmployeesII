@@ -5,7 +5,7 @@ CREATE TABLE employees(
     id SERIAL PRIMARY KEY,
     name VARCHAR,
     birthday DATE,
-    salary INTEGER,
+    salary INTEGER
 );
 
 
